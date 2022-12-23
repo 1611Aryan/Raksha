@@ -1,6 +1,7 @@
 import { AnimatePresence } from "framer-motion"
 import Head from "next/head"
 import { useState } from "react"
+import About from "../components/About"
 import Home from "../components/Home"
 import Menu from "../components/Menu"
 
@@ -18,6 +19,7 @@ const Main = () => {
       <main>
         <AnimatePresence>{menu && <Menu setMenu={setMenu} />}</AnimatePresence>
         <Home setMenu={setMenu} />
+        <About />
       </main>
     </div>
   )
