@@ -31,6 +31,7 @@ const GlobalStyle = css`
     color: var(--white);
     background: var(--darkgray);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1,

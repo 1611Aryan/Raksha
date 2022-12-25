@@ -24,7 +24,7 @@ const AboutUsContent = () => {
       />
       <p className="aboutContent">
         {content.split(" ").map((a, i) => {
-          if (a === "<br/>") return <br />
+          if (a === "<br/>") return <br key={i} />
           return <span key={i}>{a}&nbsp;</span>
         })}
       </p>

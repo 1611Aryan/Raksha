@@ -6,6 +6,7 @@ import AboutUsContent from "../components/AboutUsContent"
 import Home from "../components/Home"
 import Menu from "../components/Menu"
 import Projects from "../components/Projects"
+import ProjectsContent from "../components/ProjectsContent"
 
 const Main = () => {
   const [menu, setMenu] = useState(false)
@@ -24,6 +25,7 @@ const Main = () => {
         <About />
         <AboutUsContent />
         <Projects />
+        <ProjectsContent />
       </main>
     </div>
   )
