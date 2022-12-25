@@ -69,7 +69,7 @@ const StyledSection = styled.section`
     font-family: var(--fontSerif);
 
     color: var(--white);
-    font-size: 15rem;
+    font-size: 13rem;
     line-height: 0.5;
   }
 `

@@ -4,7 +4,7 @@ import Logo from "./../../public/images/LOGO.png"
 
 const AboutUsContent = () => {
   const content =
-    " At Raksha, we are passionate about designing beautiful spaces for each client. We thoroughly believe in innovating creative concepts by achieving great balance in design and accessibility, that make our work exclusive."
+    "Manifest your dreams with us! <br/> We at Raksha interiors are dedicated to make your life easier. We aspire to give you an experience of mesmerizing construction and interiors/exteriors like never before. We have a solution for all residential and commercial projects."
 
   return (
     <StyledSection>
@@ -23,9 +23,10 @@ const AboutUsContent = () => {
         priority
       />
       <p className="aboutContent">
-        {content.split(" ").map((a, i) => (
-          <span key={i}>{a}&nbsp;</span>
-        ))}
+        {content.split(" ").map((a, i) => {
+          if (a === "<br/>") return <br />
+          return <span key={i}>{a}&nbsp;</span>
+        })}
       </p>
     </StyledSection>
   )
@@ -56,12 +57,12 @@ const StyledSection = styled.section`
   }
 
   .aboutLogo {
-    height: 50vh;
-    width: 50vh;
+    height: 45vh;
+    width: 45vh;
     object-fit: cover;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    border: 5px solid var(--black);
+    //border: 4px solid var(--black);
     z-index: 2;
     &:hover {
       filter: brightness(110%) saturate(110%);
@@ -70,7 +71,7 @@ const StyledSection = styled.section`
 
   .aboutContent {
     width: 45%;
-    font-size: 2rem;
+    font-size: 1.85rem;
     line-height: 1.5;
     font-weight: 100;
     color: #fffa;
