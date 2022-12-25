@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 import Image from "next/image"
 import React, { useRef } from "react"
-import aboutBg from "./../../static/aboutBg.jpg"
+import aboutBg from "./../../public/images/aboutBg.jpg"
 
 const About = () => {
   const imageRef = useRef<HTMLImageElement>(null)
@@ -37,7 +37,7 @@ const StyledSection = styled.section`
     height: 100%;
     object-fit: cover;
     transform: scale(1.2);
-    transition: all 250ms ease-in-out;
+    transition: all 50ms ease-in-out;
   }
   .top {
     z-index: 2;
@@ -48,7 +48,7 @@ const StyledSection = styled.section`
     height: 0;
     border-style: solid;
     border-width: 50vh 100vw 0 0;
-    border-color: var(--gray) transparent transparent transparent;
+    border-color: var(--darkgray) transparent transparent transparent;
   }
   .bottom {
     z-index: 2;
@@ -59,17 +59,18 @@ const StyledSection = styled.section`
     height: 0;
     border-style: solid;
     border-width: 0 0 50vh 100vw;
-    border-color: transparent transparent var(--gray) transparent;
+    border-color: transparent transparent var(--darkgray) transparent;
   }
   .aboutHeading {
     position: absolute;
-    bottom: 1rem;
-    left: 2rem;
+    bottom: var(--padding);
+    left: var(--padding);
     z-index: 2;
-    font-family: "Playfair Display", serif;
-    color: #fff;
+    font-family: var(--fontSerif);
+
+    color: var(--white);
     font-size: 15rem;
-    line-height: 1;
+    line-height: 0.5;
   }
 `
 export default About

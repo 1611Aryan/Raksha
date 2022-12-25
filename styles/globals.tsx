@@ -1,23 +1,36 @@
 import { css } from "@emotion/react"
 
 const GlobalStyle = css`
+  :root {
+    --padding: 2rem;
+    --inverse: #19716b;
+    --yellow: #f2aa4c;
+    --gold: #d8b944;
+    --gray: #101820;
+    --darkgray: #090e13;
+    --black: #000;
+    --white: #fff;
+    /* --fontSerif: "SilkSerif", serif;
+    --fontSans: "SilkSerif", sans-serif; */
+  }
   * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: var(--fontSans);
   }
 
-  :root {
-    --padding: 2rem;
-    --yellow: #f2aa4c;
-    --gray: #101820;
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(37, 37, 37, 0);
   }
 
   html,
   body {
-    font-family: "Inter", sans-serif;
+    font-family: var(--fontSans);
     color: #fff;
     background: #000;
+    -webkit-font-smoothing: antialiased;
   }
 
   h1,
@@ -26,7 +39,7 @@ const GlobalStyle = css`
   h4,
   h5,
   h6 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--fontSans);
   }
 
   a {

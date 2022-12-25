@@ -33,7 +33,7 @@ const StyledDiv = styled.div`
   }
 
   h1:nth-of-type(odd) {
-    color: #19716b;
+    color: var(--inverse);
   }
   h1:nth-of-type(even) {
     color: var(--yellow);

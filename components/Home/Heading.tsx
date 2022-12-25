@@ -22,9 +22,9 @@ const StyledDiv = styled.div`
   z-index: 2;
 
   div {
-    font-size: 5rem;
-    line-height: 0.8;
-    border: 0.8rem solid #fff;
+    font-size: 5.5rem;
+    line-height: 0.5;
+    border: 0.8rem solid var(--white);
     background: #0002;
     backdrop-filter: blur(2px);
     padding: 5rem 4rem;
@@ -33,10 +33,12 @@ const StyledDiv = styled.div`
 
     h1 {
       font-weight: 700;
+      font-family: var(--fontSerif);
     }
 
     h3 {
-      font-size: 0.47em;
+      font-size: 0.41em;
+      letter-spacing: 0.05ch;
       font-weight: 500;
     }
   }

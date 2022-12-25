@@ -1,15 +1,45 @@
 import { Global } from "@emotion/react"
-import { Inter, Playfair_Display } from "@next/font/google"
+import localFont from "@next/font/local"
 import type { AppProps } from "next/app"
 import GlobalStyle from "../styles/globals"
 import "../styles/globals.tsx"
 
-const inter = Inter({ subsets: ["latin"] })
-const playFair = Playfair_Display({ subsets: ["latin"] })
+const silkSerif = localFont({
+  variable: "--fontSerif",
+  src: [
+    {
+      path: "./../public/fonts/SilkSerif-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./../public/fonts/SilkSerif-Light.woff2",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "./../public/fonts/SilkSerif-LightItalic.woff2",
+      weight: "200",
+      style: "italic",
+    },
+    {
+      path: "./../public/fonts/SilkSerif-Italic.woff2",
+      weight: "400",
+      style: "italic",
+    },
+  ],
+})
+
+const workSans = localFont({
+  variable: "--fontSans",
+  src: "./../public/fonts/WorkSans-Regular.woff2",
+  weight: "400",
+  style: "normal",
+})
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${inter.className} ${playFair.className}`}>
+    <main className={`${workSans.variable}  ${silkSerif.variable} `}>
       <Global styles={GlobalStyle} />
       <Component {...pageProps} />
     </main>
