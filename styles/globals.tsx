@@ -9,7 +9,7 @@ const GlobalStyle = css`
     --gray: #101820;
     --darkgray: #090e13;
     --black: #000;
-    --white: #fff;
+    --white: #ecece4;
     /* --fontSerif: "SilkSerif", serif;
     --fontSans: "SilkSerif", sans-serif; */
   }
@@ -28,8 +28,8 @@ const GlobalStyle = css`
   html,
   body {
     font-family: var(--fontSans);
-    color: #fff;
-    background: #000;
+    color: var(--white);
+    background: var(--darkgray);
     -webkit-font-smoothing: antialiased;
   }
 
@@ -62,8 +62,8 @@ const GlobalStyle = css`
       color-scheme: dark;
     }
     body {
-      color: white;
-      background: black;
+      color: var(--white);
+      background: var(--darkgray);
     }
   }
 `

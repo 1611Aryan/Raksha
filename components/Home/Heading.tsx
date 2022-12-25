@@ -30,6 +30,7 @@ const StyledDiv = styled.div`
     padding: 5rem 4rem;
 
     box-shadow: 20px 20px 15px #0005;
+    color: var(--white);
 
     h1 {
       font-weight: 700;
