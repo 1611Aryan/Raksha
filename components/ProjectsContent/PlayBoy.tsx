@@ -26,13 +26,7 @@ const PlayBoy = () => {
 
   return (
     <StyledSection>
-      <h2>
-        Playboy
-        <br />
-        Beer Garden
-        <br />
-        Zirakpur
-      </h2>
+      <h2>Playboy Beer Garden Zirakpur</h2>
       <div className="media">
         <Image src={img1} alt="playboy interior" placeholder="blur" />
         <Image src={img2} alt="playboy interior" placeholder="blur" />
@@ -60,72 +54,38 @@ const StyledSection = styled.section`
   background: var(--white);
 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
 
   color: var(--black);
   h2 {
     font-family: var(--fontSerif);
     line-height: 1;
     font-size: 5rem;
-    //font-weight: 400;
-    margin-left: calc(3 * var(--padding));
+    font-weight: 400;
+
+    margin: 0 0 calc(2 * var(--padding)) calc(3 * var(--padding));
   }
 
   .media {
-    height: 80%;
-    aspect-ratio: 4/5;
+    width: 100%;
+    height: 50%;
+
     background: #fff;
-    border: 10px solid #fff;
 
     display: flex;
-    flex-wrap: wrap;
+
     justify-content: flex-start;
     align-items: flex-start;
 
-    transform: translate(calc(1 * var(--padding))) rotate(7deg);
-    transition: transform ease-in 200ms;
-
     overflow: hidden;
-    & > :is(video, img) {
-      flex: 1 1 0;
+    > * {
+      height: 100%;
+      min-width: 33%;
       object-fit: cover;
-      max-height: 50%;
-      max-width: 50%;
-
-      transition: transform ease-out 100ms;
-
-      &:hover {
-        /* transform: translate(var(--translate)) scale(2);
-        transition: transform ease-in 200ms 400ms; */
-      }
-    }
-    video {
-      --translate: 0%;
-      transform-origin: bottom right;
-    }
-    img {
-      &:nth-of-type(1) {
-        --translate: 0%;
-        transform-origin: top left;
-      }
-
-      &:nth-of-type(2) {
-        --translate: -0%;
-        transform-origin: top right;
-      }
-      &:nth-of-type(3) {
-        --translate: 0%;
-        transform-origin: bottom left;
-      }
-    }
-
-    &:hover {
-      transform: translate(
-          calc(1 * var(--padding)),
-          calc(-0.5 * var(--padding))
-        )
-        rotate(0deg);
+      width: auto;
+      //border: 5px solid #fff;
+      border-right: 0;
     }
   }
 `
