@@ -1,10 +1,12 @@
 import styled from "@emotion/styled"
 import PlayBoy from "./PlayBoy"
+import Regus from "./Regus"
 
 const ProjectsContent = () => {
   return (
     <StyledSection>
       <PlayBoy />
+      <Regus />
     </StyledSection>
   )
 }

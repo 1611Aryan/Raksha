@@ -7,7 +7,7 @@ import img3 from "./../../public/images/playboy3.jpg"
 import Image from "next/image"
 import { useRef } from "react"
 
-const PlayBoy = () => {
+const Regus = () => {
   const videoRef = useRef<HTMLVideoElement>(null)
 
   const play = () => {
@@ -26,13 +26,7 @@ const PlayBoy = () => {
 
   return (
     <StyledSection>
-      <h2>
-        Playboy
-        <br />
-        Beer Garden
-        <br />
-        Zirakpur
-      </h2>
+      <h2>Regus</h2>
       <div className="media">
         <Image src={img1} alt="playboy interior" placeholder="blur" />
         <Image src={img2} alt="playboy interior" placeholder="blur" />
@@ -62,6 +56,7 @@ const StyledSection = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row-reverse;
 
   color: var(--black);
   h2 {
@@ -69,7 +64,7 @@ const StyledSection = styled.section`
     line-height: 1;
     font-size: 5rem;
     //font-weight: 400;
-    margin-left: calc(3 * var(--padding));
+    margin-right: calc(3 * var(--padding));
   }
 
   .media {
@@ -83,7 +78,7 @@ const StyledSection = styled.section`
     justify-content: flex-start;
     align-items: flex-start;
 
-    transform: translate(calc(1 * var(--padding))) rotate(7deg);
+    transform: translate(calc(-1 * var(--padding))) rotate(-7deg);
     transition: transform ease-in 200ms;
 
     overflow: hidden;
@@ -122,7 +117,7 @@ const StyledSection = styled.section`
 
     &:hover {
       transform: translate(
-          calc(1 * var(--padding)),
+          calc(-1 * var(--padding)),
           calc(-0.5 * var(--padding))
         )
         rotate(0deg);
@@ -130,4 +125,4 @@ const StyledSection = styled.section`
   }
 `
 
-export default PlayBoy
+export default Regus
