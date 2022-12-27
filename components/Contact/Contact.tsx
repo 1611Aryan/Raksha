@@ -6,7 +6,7 @@ import img from "./../../public/images/contactBg.jpg"
 
 const Contact = () => {
   return (
-    <StyledSection>
+    <StyledSection id="contact">
       <Image
         src={img}
         className="contactBg"

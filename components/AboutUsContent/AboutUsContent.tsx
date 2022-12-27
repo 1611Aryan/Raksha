@@ -64,9 +64,6 @@ const StyledSection = styled.section`
     border-radius: 50%;
     //border: 4px solid var(--black);
     z-index: 2;
-    &:hover {
-      filter: brightness(110%) saturate(110%);
-    }
   }
 
   .aboutContent {
@@ -76,6 +73,7 @@ const StyledSection = styled.section`
     font-weight: 300;
     color: #fffa;
     z-index: 2;
+    transition: color ease-in-out 100ms;
     span {
       display: inline-block;
       &:hover {

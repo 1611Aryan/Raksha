@@ -4,7 +4,7 @@ import ProjectsBg from "./../../public/images/ProjectBg.jpg"
 
 const Projects = () => {
   return (
-    <StyledSection>
+    <StyledSection id="projects">
       <Image
         src={ProjectsBg}
         className="projectsBg"

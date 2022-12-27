@@ -4,6 +4,7 @@ import { useState } from "react"
 import About from "../components/About"
 import AboutUsContent from "../components/AboutUsContent"
 import Contact from "../components/Contact"
+import Header from "../components/Header/Header"
 import Home from "../components/Home"
 import Menu from "../components/Menu"
 import Projects from "../components/Projects"
@@ -22,7 +23,8 @@ const Main = () => {
 
       <main>
         <AnimatePresence>{menu && <Menu setMenu={setMenu} />}</AnimatePresence>
-        <Home setMenu={setMenu} />
+        <Header setMenu={setMenu} />
+        <Home />
         <About />
         <AboutUsContent />
         <Projects />

@@ -32,6 +32,22 @@ const GlobalStyle = css`
     background: var(--darkgray);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    scrollbar-color: var(--white) var(--gray);
+    scrollbar-width: thin;
+  }
+
+  body::-webkit-scrollbar {
+    width: 11px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: var(--gray);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--white);
+    border-radius: 2px;
   }
 
   h1,

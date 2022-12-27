@@ -17,7 +17,7 @@ const About = () => {
   }
 
   return (
-    <StyledSection onMouseMove={moveHandler}>
+    <StyledSection onMouseMove={moveHandler} id="about">
       <Image src={aboutBg} ref={imageRef} alt="indoor furnish" className="bg" />
       <div className="top"></div>
       <div className="bottom"></div>
@@ -32,7 +32,7 @@ const StyledSection = styled.section`
   background: var(--gray);
   overflow: hidden;
   position: relative;
-  z-index: 2;
+
   .bg {
     width: 100%;
     height: 100%;

@@ -5,25 +5,8 @@ import img2 from "./../../public/images/playboy2.jpg"
 import img3 from "./../../public/images/playboy3.jpg"
 
 import Image from "next/image"
-import { useRef } from "react"
 
 const PlayBoy = () => {
-  const videoRef = useRef<HTMLVideoElement>(null)
-
-  const play = () => {
-    if (videoRef.current) {
-      videoRef.current.play()
-      videoRef.current.controls = true
-    }
-  }
-
-  const pause = () => {
-    if (videoRef.current) {
-      videoRef.current.pause()
-      videoRef.current.controls = false
-    }
-  }
-
   return (
     <StyledSection>
       <h2>Playboy Beer Garden Zirakpur</h2>
@@ -31,16 +14,6 @@ const PlayBoy = () => {
         <Image src={img1} alt="playboy interior" placeholder="blur" />
         <Image src={img2} alt="playboy interior" placeholder="blur" />
         <Image src={img3} alt="playboy interior" placeholder="blur" />
-        <video
-          ref={videoRef}
-          loop
-          muted
-          controls={false}
-          placeholder="blur"
-          src="/images/playboy.mp4"
-          onMouseEnter={play}
-          onMouseLeave={pause}
-        ></video>
       </div>
     </StyledSection>
   )
@@ -81,7 +54,7 @@ const StyledSection = styled.section`
     overflow: hidden;
     > * {
       height: 100%;
-      min-width: 33%;
+      width: calc(100% / 3);
       object-fit: cover;
       width: auto;
       //border: 5px solid #fff;

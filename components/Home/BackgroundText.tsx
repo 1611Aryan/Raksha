@@ -24,10 +24,11 @@ const StyledDiv = styled.div`
   transition: all ease-in-out 500ms;
 
   h1 {
-    width: max-content;
+    min-width: max-content;
+    width: 100%;
 
-    text-align: justify;
-    font-size: 4.65vw;
+    text-align: center;
+    font-size: 4.63vw;
     font-weight: 700;
     line-height: 0.9;
   }
