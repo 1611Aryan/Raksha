@@ -1,4 +1,5 @@
 import { Global } from "@emotion/react"
+import { Work_Sans } from "@next/font/google"
 import localFont from "@next/font/local"
 import type { AppProps } from "next/app"
 import GlobalStyle from "../styles/globals"
@@ -30,11 +31,10 @@ const silkSerif = localFont({
   ],
 })
 
-const workSans = localFont({
+const workSans = Work_Sans({
+  subsets: ["latin"],
   variable: "--fontSans",
-  src: "./../public/fonts/WorkSans-Regular.woff2",
-  weight: "400",
-  style: "normal",
+  // weight: ["300", "400", "500", "900"],
 })
 
 export default function App({ Component, pageProps }: AppProps) {

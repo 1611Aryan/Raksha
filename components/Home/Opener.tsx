@@ -24,9 +24,14 @@ const Opener: React.FC<{
 }
 
 const StyledSection = styled.section`
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
+  z-index: 9;
+  pointer-events: none;
 
   .left,
   .right {
@@ -35,6 +40,8 @@ const StyledSection = styled.section`
     height: 100%;
     z-index: 4;
 
+    pointer-events: auto;
+
     background: var(--gray);
     display: flex;
     justify-content: center;
@@ -42,15 +49,21 @@ const StyledSection = styled.section`
 
     position: relative;
 
-    font-size: 5rem;
-    line-height: 1;
+    font-size: 6rem;
+    line-height: 0.6;
 
     transition: transform ease 500ms;
     cursor: pointer;
 
+    h1 {
+      font-weight: 700;
+      font-family: var(--fontSerif);
+    }
+
     h3 {
-      font-size: 0.56em;
-      line-height: 1;
+      font-size: 0.4em;
+      //  letter-spacing: 0.05ch;
+      font-weight: 500;
     }
 
     &::before {

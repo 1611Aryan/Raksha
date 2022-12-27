@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import More from "./More"
 import PlayBoy from "./PlayBoy"
 import Regus from "./Regus"
 
@@ -7,6 +8,7 @@ const ProjectsContent = () => {
     <StyledSection>
       <PlayBoy />
       <Regus />
+      <More />
     </StyledSection>
   )
 }

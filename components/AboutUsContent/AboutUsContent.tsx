@@ -73,7 +73,7 @@ const StyledSection = styled.section`
     width: 45%;
     font-size: 1.85rem;
     line-height: 1.5;
-    font-weight: 100;
+    font-weight: 300;
     color: #fffa;
     z-index: 2;
     span {

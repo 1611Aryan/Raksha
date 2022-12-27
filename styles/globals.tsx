@@ -8,7 +8,7 @@ const GlobalStyle = css`
     --gold: #d8b944;
     --gray: #101820;
     --darkgray: #090e13;
-    --black: #000;
+    --black: #222;
     --white: #ecece4;
     /* --fontSerif: "SilkSerif", serif;
     --fontSans: "SilkSerif", sans-serif; */

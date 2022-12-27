@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 const BackgroundText: React.FC<{ animate: boolean }> = ({ animate }) => {
   return (
     <StyledDiv className={animate ? "visible" : ""}>
-      {new Array(13).fill(null).map((_, i) => (
+      {new Array(15).fill(null).map((_, i) => (
         <h1 key={i}>CREATING THINGS THAT CAN&apos;T BE UNSEEN</h1>
       ))}
     </StyledDiv>
@@ -28,7 +28,7 @@ const StyledDiv = styled.div`
 
     text-align: justify;
     font-size: 4.65vw;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 0.9;
   }
 

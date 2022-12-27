@@ -32,6 +32,7 @@ const StyledSection = styled.section`
   background: var(--gray);
   overflow: hidden;
   position: relative;
+  z-index: 2;
   .bg {
     width: 100%;
     height: 100%;
