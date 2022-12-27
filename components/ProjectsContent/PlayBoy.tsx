@@ -56,9 +56,6 @@ const StyledSection = styled.section`
       height: 100%;
       width: calc(100% / 3);
       object-fit: cover;
-      width: auto;
-      //border: 5px solid #fff;
-      border-right: 0;
     }
   }
 `
