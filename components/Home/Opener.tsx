@@ -49,7 +49,8 @@ const StyledSection = styled.section`
 
     position: relative;
 
-    font-size: 6rem;
+    font-size: clamp(4rem, 6vw, 6rem);
+    max-width: calc(100% - var(--padding) * 2);
     line-height: 0.6;
 
     transition: transform ease 500ms;
@@ -67,20 +68,7 @@ const StyledSection = styled.section`
     }
 
     &::before {
-      --padding: 2rem;
-      --width: 1rem;
-      content: "";
-      position: absolute;
-      top: var(--padding);
-      left: var(--padding);
-      right: var(--padding);
-      bottom: var(--padding);
-      border: var(--width) solid var(--yellow);
-      background: transparent;
-    }
-    &::after {
-      --padding: 3rem;
-      --width: 0;
+      --width: clamp(0.5rem, 2vw, 1rem);
       content: "";
       position: absolute;
       top: var(--padding);

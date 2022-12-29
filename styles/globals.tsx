@@ -2,7 +2,7 @@ import { css } from "@emotion/react"
 
 const GlobalStyle = css`
   :root {
-    --padding: 2rem;
+    --padding: clamp(1rem, 3vw, 2rem);
     --inverse: #19716b;
     --yellow: #f2aa4c;
     --gold: #d8b944;
@@ -10,9 +10,12 @@ const GlobalStyle = css`
     --darkgray: #090e13;
     --black: #222;
     --white: #ecece4;
-    /* --fontSerif: "SilkSerif", serif;
-    --fontSans: "SilkSerif", sans-serif; */
+    --mobile: 480px;
+    --ipad: 768px;
+    --laptop: 1024px;
+    --tv: 1200px;
   }
+
   * {
     box-sizing: border-box;
     padding: 0;

@@ -24,7 +24,7 @@ const StyledHeader = styled.header`
 
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   padding: var(--padding);
 
   background: transparent;
@@ -37,8 +37,8 @@ const StyledHeader = styled.header`
   pointer-events: none;
 
   .logo {
-    width: 5rem;
-    height: 5rem;
+    width: clamp(3rem, 5vw, 5rem);
+    height: clamp(3rem, 5vw, 5rem);
 
     object-fit: cover;
     cursor: pointer;
@@ -49,7 +49,7 @@ const StyledHeader = styled.header`
   menu {
     color: var(--gray);
     mix-blend-mode: multiply;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
     cursor: pointer;
     pointer-events: auto;
   }

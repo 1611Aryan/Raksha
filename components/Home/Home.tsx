@@ -34,6 +34,12 @@ const StyledSection = styled.section`
   .visible {
     opacity: 1;
   }
+
+  @media only screen and (max-width: 480px) {
+    .open {
+      transform: rotate(-160deg) scale(0.5, 0.4);
+    }
+  }
 `
 
 export default Home

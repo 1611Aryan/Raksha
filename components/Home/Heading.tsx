@@ -22,17 +22,18 @@ const StyledDiv = styled.div`
   z-index: 2;
 
   div {
-    font-size: 5.5rem;
+    font-size: clamp(3rem, 6vw, 5.5rem);
     line-height: 0.5;
-    border: 0.8rem solid var(--white);
+    border: clamp(0.4rem, 1vw, 0.8rem) solid var(--white);
     background: #0002;
     backdrop-filter: blur(2px);
-    padding: 5rem 4rem;
+    padding: clamp(3rem, 5vw, 5rem) clamp(1rem, 4vw, 4rem);
 
-    box-shadow: 20px 20px 15px #0005;
+    box-shadow: clamp(1rem, 2vw, 2rem) clamp(1rem, 2vw, 2rem) 15px #0005;
     color: var(--white);
 
     h1 {
+      margin-top: 1.75rem;
       font-weight: 700;
       font-family: var(--fontSerif);
     }

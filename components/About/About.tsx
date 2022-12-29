@@ -70,7 +70,8 @@ const StyledSection = styled.section`
     font-family: var(--fontSerif);
 
     color: var(--white);
-    font-size: 13rem;
+    font-size: clamp(5rem, 13vw, 13rem);
+    width: 100%;
     line-height: 0.5;
   }
 `

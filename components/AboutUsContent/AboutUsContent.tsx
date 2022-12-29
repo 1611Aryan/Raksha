@@ -68,7 +68,7 @@ const StyledSection = styled.section`
 
   .aboutContent {
     width: 45%;
-    font-size: 1.85rem;
+    font-size: clamp(1.25rem, 2vw, 1.85rem);
     line-height: 1.5;
     font-weight: 300;
     color: #fffa;
@@ -79,6 +79,18 @@ const StyledSection = styled.section`
       &:hover {
         color: var(--gold);
       }
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    justify-content: center;
+    .aboutLogo {
+      display: none;
+    }
+    .aboutContent {
+      width: 90%;
+
+      line-height: 1.5;
     }
   }
 `
