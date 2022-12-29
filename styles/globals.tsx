@@ -36,6 +36,9 @@ const GlobalStyle = css`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
+    width: 100%;
+    height: 100%;
+
     scrollbar-color: var(--white) var(--gray);
     scrollbar-width: thin;
   }
@@ -75,16 +78,6 @@ const GlobalStyle = css`
     background: transparent;
     border: 0;
     outline: 0;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    html {
-      color-scheme: dark;
-    }
-    body {
-      color: var(--white);
-      background: var(--darkgray);
-    }
   }
 `
 export default GlobalStyle

@@ -46,6 +46,7 @@ const StyledSection = styled.section`
 
   display: flex;
   color: var(--black);
+  z-index: 2;
 
   .contactBg {
     position: absolute;
@@ -128,6 +129,70 @@ const StyledSection = styled.section`
     }
     100% {
       filter: hue-rotate(360deg);
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .left {
+      display: none;
+    }
+
+    .right {
+      width: 100%;
+      height: 100%;
+
+      .top {
+        width: 100%;
+        height: 50%;
+        background: #fff;
+
+        padding: calc(2 * var(--padding));
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: var(--padding);
+        h1 {
+          font-family: var(--fontSerif);
+          font-size: clamp(3rem, 5vw, 5rem);
+          line-height: 0.8;
+        }
+        p {
+          font-size: clamp(1rem, 2vw, 2rem);
+          font-weight: 300;
+
+          span {
+            color: navy;
+            animation: color 5s linear infinite alternate;
+          }
+        }
+      }
+
+      .bottom {
+        width: 100%;
+        height: 50%;
+        background: var(--yellow);
+
+        padding: calc(2 * var(--padding));
+        display: flex;
+        flex-direction: column;
+        gap: var(--padding);
+
+        div {
+          display: flex;
+          align-items: center;
+          gap: var(--padding);
+
+          .icon {
+            color: #fff;
+            font-size: clamp(2rem, 3vw, 3rem);
+          }
+
+          span {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            font-weight: 400;
+          }
+        }
+      }
     }
   }
 `

@@ -60,7 +60,7 @@ const StyledSection = styled.section`
   }
 
   @media only screen and (max-width: 480px) {
-    --height: 35vh;
+    --height: 60vh;
     --width: 75vw;
 
     .line {

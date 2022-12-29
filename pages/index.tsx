@@ -39,7 +39,7 @@ const Main = () => {
 const StyledMain = styled.main`
   width: 100vw;
   height: 800vh;
-  overflow: hidden;
+  overflow-x: hidden;
 `
 
 export default Main

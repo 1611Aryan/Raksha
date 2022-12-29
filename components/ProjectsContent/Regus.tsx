@@ -51,12 +51,11 @@ const StyledSection = styled.section`
   h2 {
     font-family: var(--fontSerif);
     line-height: 1;
-    font-size: 5rem;
+    font-size: clamp(3rem, 5vw, 5rem);
     font-weight: 400;
 
     margin: 0 0 calc(2 * var(--padding)) calc(3 * var(--padding));
   }
-
   .media {
     width: 100%;
     height: 50%;
@@ -76,6 +75,12 @@ const StyledSection = styled.section`
       width: auto;
       //border: 5px solid #fff;
       border-right: 0;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    h2 {
+      width: min-content;
     }
   }
 `

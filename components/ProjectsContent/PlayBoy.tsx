@@ -34,7 +34,7 @@ const StyledSection = styled.section`
   h2 {
     font-family: var(--fontSerif);
     line-height: 1;
-    font-size: 5rem;
+    font-size: clamp(3rem, 5vw, 5rem);
     font-weight: 400;
 
     margin: 0 0 calc(2 * var(--padding)) calc(3 * var(--padding));
@@ -56,6 +56,12 @@ const StyledSection = styled.section`
       height: 100%;
       width: calc(100% / 3);
       object-fit: cover;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    h2 {
+      width: min-content;
     }
   }
 `

@@ -62,7 +62,7 @@ const StyledSection = styled(motion.section)`
     top: calc(var(--padding));
     right: var(--padding);
     color: var(--white);
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
     cursor: pointer;
   }
 
@@ -90,7 +90,7 @@ const StyledSection = styled(motion.section)`
       align-items: center;
 
       span {
-        font-size: 4rem;
+        font-size: clamp(2rem, 4vw, 4rem);
         font-weight: 500;
       }
 
