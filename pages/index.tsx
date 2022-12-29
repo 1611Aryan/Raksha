@@ -1,3 +1,4 @@
+import styled from "@emotion/styled"
 import { AnimatePresence } from "framer-motion"
 import Head from "next/head"
 import { useState } from "react"
@@ -21,7 +22,7 @@ const Main = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <StyledMain>
         <AnimatePresence>{menu && <Menu setMenu={setMenu} />}</AnimatePresence>
         <Header setMenu={setMenu} />
         <Home />
@@ -30,9 +31,15 @@ const Main = () => {
         <Projects />
         <ProjectsContent />
         <Contact />
-      </main>
+      </StyledMain>
     </div>
   )
 }
+
+const StyledMain = styled.main`
+  width: 100vw;
+  height: 800vh;
+  overflow: hidden;
+`
 
 export default Main
