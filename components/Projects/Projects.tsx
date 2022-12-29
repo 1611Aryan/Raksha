@@ -26,7 +26,7 @@ const StyledSection = styled.section`
 
   --height: 75vh;
   --width: 35vw;
-  --fontSize: 10rem;
+  --fontSize: clamp(5rem, 11vw, 10rem);
 
   .projectsBg {
     position: absolute;
@@ -57,6 +57,29 @@ const StyledSection = styled.section`
     font-family: var(--fontSerif);
     line-height: 1.65;
     font-weight: 400;
+  }
+
+  @media only screen and (max-width: 480px) {
+    --height: 35vh;
+    --width: 75vw;
+
+    .line {
+      position: absolute;
+      top: calc(var(--height) + 1 * var(--fontSize));
+      left: 0;
+
+      height: 3px;
+      width: 100%;
+      background: var(--black);
+    }
+
+    .projectsHeading {
+      top: calc(var(--height) + var(--fontSize));
+      left: 0;
+
+      width: 100%;
+      padding: 0 var(--padding);
+    }
   }
 `
 export default Projects
