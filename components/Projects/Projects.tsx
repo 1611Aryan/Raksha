@@ -21,13 +21,15 @@ const StyledSection = styled.section`
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: var(--white);
+
   position: relative;
 
   --height: 75vh;
   --width: 35vw;
   --fontSize: clamp(5rem, 11vw, 10rem);
+  z-index: 2;
 
+  pointer-events: none;
   .projectsBg {
     position: absolute;
     top: 0;

@@ -41,8 +41,6 @@ const StyledSection = styled.section`
   height: 100vh;
   overflow: hidden;
 
-  background: var(--white);
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -60,8 +58,6 @@ const StyledSection = styled.section`
     width: 100%;
     height: 50%;
 
-    background: #fff;
-
     display: flex;
 
     justify-content: flex-start;
@@ -69,12 +65,11 @@ const StyledSection = styled.section`
 
     overflow: hidden;
     > * {
+      opacity: 0.95;
       height: 100%;
       min-width: calc(100% / 3);
       object-fit: cover;
       width: auto;
-      //border: 5px solid #fff;
-      border-right: 0;
     }
   }
 

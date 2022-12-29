@@ -16,6 +16,9 @@ const ProjectsContent = () => {
 const StyledSection = styled.section`
   width: 100%;
   min-height: 300vh;
-  background: var(--white);
+  position: relative;
+  background: transparent;
+  pointer-events: none;
+  z-index: 3;
 `
 export default ProjectsContent

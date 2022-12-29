@@ -24,13 +24,12 @@ const StyledSection = styled.section`
   height: 100vh;
   overflow: hidden;
 
-  background: var(--white);
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 
   color: var(--black);
+  z-index: 2;
   h2 {
     font-family: var(--fontSerif);
     line-height: 1;
@@ -44,8 +43,6 @@ const StyledSection = styled.section`
     width: 100%;
     height: 50%;
 
-    background: #fff;
-
     display: flex;
 
     justify-content: flex-start;
@@ -53,6 +50,7 @@ const StyledSection = styled.section`
 
     overflow: hidden;
     > * {
+      opacity: 0.95;
       height: 100%;
       width: calc(100% / 3);
       object-fit: cover;

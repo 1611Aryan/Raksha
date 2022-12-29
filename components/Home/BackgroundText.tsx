@@ -1,21 +1,12 @@
 import styled from "@emotion/styled"
-import { useLayoutEffect, useState } from "react"
 
-const BackgroundText: React.FC<{ animate: boolean }> = ({ animate }) => {
-  const [num, setNum] = useState(15)
-
-  useLayoutEffect(() => {
-    setNum(() => Math.ceil(window.innerHeight / 70))
-  }, [])
-
-  return (
-    <StyledDiv className={animate ? "visible" : ""}>
-      {new Array(50).fill(null).map((_, i) => (
-        <h1 key={i}>CREATING THINGS THAT CAN&apos;T BE UNSEEN</h1>
-      ))}
-    </StyledDiv>
-  )
-}
+const BackgroundText: React.FC<{ animate: boolean }> = ({ animate }) => (
+  <StyledDiv className={animate ? "visible" : ""}>
+    {new Array(50).fill(null).map((_, i) => (
+      <h1 key={i}>CREATING THINGS THAT CAN&apos;T BE UNSEEN</h1>
+    ))}
+  </StyledDiv>
+)
 
 const StyledDiv = styled.div`
   position: absolute;

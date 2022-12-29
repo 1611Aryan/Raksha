@@ -16,7 +16,6 @@ const StyledSection = styled.section`
   height: 100vh;
 
   color: var(--black);
-  background: var(--white);
 
   display: flex;
   justify-content: center;
@@ -42,6 +41,8 @@ const StyledSection = styled.section`
     color: var(--black);
 
     transition: all linear 100ms;
+
+    pointer-events: auto;
 
     &:hover {
       background: var(--darkgray);

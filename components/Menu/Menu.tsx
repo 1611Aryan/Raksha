@@ -1,32 +1,23 @@
 import styled from "@emotion/styled"
-import { motion } from "framer-motion"
 import Link from "next/link"
-import { Dispatch } from "react"
+import { Dispatch, useEffect, useState } from "react"
 import { FaTimes } from "react-icons/fa"
 
 const Menu: React.FC<{
   setMenu: Dispatch<false>
 }> = ({ setMenu }) => {
-  const variants = {
-    hidden: {
-      x: "100%",
-      opacity: 0,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-    },
-  }
+  const [animate, setAnimate] = useState(false)
 
   const close = () => setTimeout(() => setMenu(false))
 
+  useEffect(() => {
+    setAnimate(true)
+
+    return () => setAnimate(false)
+  }, [])
+
   return (
-    <StyledSection
-      initial="hidden"
-      variants={variants}
-      animate="visible"
-      exit="hidden"
-    >
+    <StyledSection className={animate ? "menuVis" : ""}>
       <button onClick={close}>
         <FaTimes />
       </button>
@@ -51,11 +42,15 @@ const Menu: React.FC<{
   )
 }
 
-const StyledSection = styled(motion.section)`
+const StyledSection = styled.section`
   position: fixed;
   inset: 0;
   background: var(--gray);
   z-index: 9;
+
+  opacity: 0;
+  transform: translate(100%);
+  transition: all 200ms ease-in-out;
 
   button {
     position: absolute;
