@@ -1,4 +1,6 @@
 import styled from "@emotion/styled"
+import { StaticImageData } from "next/image"
+import { Dispatch, SetStateAction } from "react"
 
 import img1 from "./../../public/images/playboy1.jpg"
 import img2 from "./../../public/images/playboy2.jpg"
@@ -6,11 +8,15 @@ import img3 from "./../../public/images/playboy3.jpg"
 
 import Image from "next/image"
 
-const PlayBoy = () => {
+const PlayBoy: React.FC<{
+  setImages: Dispatch<SetStateAction<StaticImageData[] | null>>
+}> = ({ setImages }) => {
+  const clickHandler = () => setImages(() => [img1, img2, img3])
+
   return (
     <StyledSection>
       <h2>Playboy Beer Garden Zirakpur</h2>
-      <div className="media">
+      <div className="media" onClick={clickHandler}>
         <Image src={img1} alt="playboy interior" placeholder="blur" />
         <Image src={img2} alt="playboy interior" placeholder="blur" />
         <Image src={img3} alt="playboy interior" placeholder="blur" />
@@ -49,6 +55,9 @@ const StyledSection = styled.section`
     align-items: flex-start;
 
     overflow: hidden;
+
+    pointer-events: auto;
+    cursor: pointer;
     > * {
       opacity: 0.95;
       height: 100%;

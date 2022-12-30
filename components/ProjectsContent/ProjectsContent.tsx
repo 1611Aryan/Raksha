@@ -1,13 +1,18 @@
 import styled from "@emotion/styled"
+import { StaticImageData } from "next/image"
+import { Dispatch, SetStateAction } from "react"
+
 import More from "./More"
 import PlayBoy from "./PlayBoy"
 import Regus from "./Regus"
 
-const ProjectsContent = () => {
+const ProjectsContent: React.FC<{
+  setImages: Dispatch<SetStateAction<StaticImageData[] | null>>
+}> = ({ setImages }) => {
   return (
     <StyledSection>
-      <PlayBoy />
-      <Regus />
+      <PlayBoy setImages={setImages} />
+      <Regus setImages={setImages} />
       <More />
     </StyledSection>
   )

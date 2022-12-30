@@ -1,11 +1,13 @@
 import styled from "@emotion/styled"
 
 import Head from "next/head"
+import { StaticImageData } from "next/image"
 import { useState } from "react"
 import About from "../components/About"
 import AboutUsContent from "../components/AboutUsContent"
 import Contact from "../components/Contact"
 import Cursor from "../components/Cursor"
+import Gallery from "../components/Gallery"
 import Header from "../components/Header/Header"
 import Home from "../components/Home"
 import Menu from "../components/Menu"
@@ -14,6 +16,7 @@ import ProjectsContent from "../components/ProjectsContent"
 
 const Main = () => {
   const [menu, setMenu] = useState(false)
+  const [images, setImages] = useState<StaticImageData[] | null>(null)
 
   return (
     <div>
@@ -25,14 +28,14 @@ const Main = () => {
 
       <StyledMain>
         {menu && <Menu setMenu={setMenu} />}
-
         <Header setMenu={setMenu} />
         <Home />
         <About />
         <AboutUsContent />
         <Cursor />
+        {images && <Gallery setImages={setImages} images={images} />}
         <Projects />
-        <ProjectsContent />
+        <ProjectsContent setImages={setImages} />
         <Contact />
       </StyledMain>
     </div>

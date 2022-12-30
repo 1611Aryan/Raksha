@@ -1,33 +1,22 @@
 import styled from "@emotion/styled"
+import { StaticImageData } from "next/image"
+import { Dispatch, SetStateAction } from "react"
 
 import img1 from "./../../public/images/regas1.jpg"
 import img2 from "./../../public/images/regas2.jpg"
 import img3 from "./../../public/images/regas3.jpg"
 
 import Image from "next/image"
-import { useRef } from "react"
 
-const Regus = () => {
-  const videoRef = useRef<HTMLVideoElement>(null)
-
-  const play = () => {
-    if (videoRef.current) {
-      videoRef.current.play()
-      videoRef.current.controls = true
-    }
-  }
-
-  const pause = () => {
-    if (videoRef.current) {
-      videoRef.current.pause()
-      videoRef.current.controls = false
-    }
-  }
+const Regus: React.FC<{
+  setImages: Dispatch<SetStateAction<StaticImageData[] | null>>
+}> = ({ setImages }) => {
+  const clickHandler = () => setImages(() => [img1, img2, img3])
 
   return (
     <StyledSection>
       <h2>Regus</h2>
-      <div className="media">
+      <div className="media" onClick={clickHandler}>
         <Image src={img3} alt="regus interior" placeholder="blur" />
         <Image src={img2} alt="regus interior" placeholder="blur" />
         <Image src={img1} alt="regus interior" placeholder="blur" />
@@ -64,6 +53,9 @@ const StyledSection = styled.section`
     align-items: flex-start;
 
     overflow: hidden;
+
+    pointer-events: auto;
+    cursor: pointer;
     > * {
       opacity: 0.95;
       height: 100%;
