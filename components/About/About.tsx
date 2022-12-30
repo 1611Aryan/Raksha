@@ -8,8 +8,8 @@ const About = () => {
 
   const moveHandler = (e: React.MouseEvent) => {
     if (window.innerWidth > 765 && imageRef.current) {
-      let xAxis = (window.innerWidth / 2 - e.pageX) / 20
-      let yAxis = (window.innerHeight / 2 - e.pageY) / 40
+      let xAxis = (window.innerWidth / 2 - e.pageX) / 10
+      let yAxis = (window.innerHeight / 2 - e.pageY) / 20
       // imageRef.current.style.transition = "all 1050ms ease-in-out"
       imageRef.current.style.transform =
         "translateX(" + xAxis + "px) translateY(" + yAxis + "px)  scale(1.2)"
