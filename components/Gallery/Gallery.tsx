@@ -66,7 +66,7 @@ const StyledSection = styled.section`
   .left,
   .right {
     min-width: 5%;
-    max-width:10%
+    max-width: 10%;
     display: grid;
     place-items: center;
     .icon {
