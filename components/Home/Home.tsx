@@ -37,7 +37,7 @@ const StyledSection = styled.section`
 
   @media only screen and (max-width: 480px) {
     .open {
-      transform: rotate(-160deg) scale(0.5, 0.4);
+      transform: rotate(-160deg) scale(0.3, 0.2);
     }
   }
 `
