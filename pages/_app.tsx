@@ -1,6 +1,7 @@
 import { Global } from "@emotion/react"
 import { Work_Sans } from "@next/font/google"
 import localFont from "@next/font/local"
+import { Analytics } from "@vercel/analytics/react"
 import type { AppProps } from "next/app"
 import GlobalStyle from "../styles/globals"
 import "../styles/globals.tsx"
@@ -42,6 +43,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <main className={`${workSans.variable}  ${silkSerif.variable} `}>
       <Global styles={GlobalStyle} />
       <Component {...pageProps} />
+      <Analytics />
     </main>
   )
 }
